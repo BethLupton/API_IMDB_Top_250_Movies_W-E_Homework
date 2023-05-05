@@ -1,0 +1,17 @@
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.movie-list-movie {
+    width: 22%;
+    display: flex;
+    align-items: stretch;
+}
+
+.movie-list-movie > div {
+    flex-grow: 1;
+}
