@@ -3,7 +3,7 @@ import './StarRanking.css';
 
 const StarRanking = ({rank}) => {
     return ( 
-        <div className='star-five'>{rank}</div>
+        <div className='star'>{rank}</div>
      );
 }
  
