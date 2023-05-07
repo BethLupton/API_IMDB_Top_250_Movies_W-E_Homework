@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import TopMovies from '../components/TopMovies';
-import SearchPage from '../components/SearchPage';
+import SelectedMovie from '../components/SelectedMovie';
 
 const TopMoviesContainer = () => {
-    const [page, setPage] = useState(0)
+    const [selectedMovie, setSelectedMovie] = useState()
 
-    const getPage = () => {
-        if (page === 0) {
-            return (<TopMovies/>)
-        }
-        if (page === 1) {
-            return (<SearchPage/>)
-        } 
+    const onTopMoviesClicked = (selectedMovie) => {
+        setSelectedMovie(selectedMovie)
     }
-    
-    return (
-        <div>
-            <button className='buttons' type='button'>Top Movies</button>
-            <button className='buttons' type='button'>Search Movies</button>
-        </div>
-    )
+
+    const clearSelectedMovie = () => {
+        setSelectedMovie()
+    }
+
+    console.log(selectedMovie);
+    if (selectedMovie) {
+        return (<SelectedMovie movie={selectedMovie} goBack={clearSelectedMovie}/>)
+    }
+
+    return (<TopMovies onMovieSelected={onTopMoviesClicked}/>) 
 }
 
 
