@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieCard.css';
-import StarRanking from './StarRanking';
+
 
 const MovieCard = ({movie, onMovieSelected}) => {
 
@@ -18,12 +18,12 @@ const MovieCard = ({movie, onMovieSelected}) => {
 
     return ( 
         <div className={`movie-card ${movieRankClass}`}>
-            <div className='movie-card-star'>
-                <StarRanking rank={movie.rank}/>
+            <div>
+                {movie.rank}.
             </div>
             <img className='movie-card-image' src={movie["image"]}/>
             <p>{movie.fullTitle}</p>
-            <button onClick={handleClick}>More Movie Magic</button>
+            <button className='more-info-button' onClick={handleClick}>More Movie Magic</button>
         </div>
      );
 }

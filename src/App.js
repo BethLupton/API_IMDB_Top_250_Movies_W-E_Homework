@@ -5,7 +5,6 @@ import TopMoviesContainer from './containers/TopMoviesContainer';
 function App() {
   return (
     <div className="App">
-      <h1 className='font-heading'> IMDB Top 250 Movies</h1>
       <TopMoviesContainer/>
     </div>
   );

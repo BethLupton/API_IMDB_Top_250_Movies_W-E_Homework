@@ -1,19 +1,4 @@
-/* .movie-card {
-    border: groove 1em rgb(230, 184, 0);
-    background-color: aliceblue;
-    border-radius: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.movie-card-star {
-    align-self: flex-start;
-}
- */
-
- :root {
+:root {
 	--d: 2500ms;
 	--angle: 90deg;
 	--gradX: 100%;
@@ -26,25 +11,25 @@
 	--bronze2: rgba(190, 122, 38, 0.194);
 }
 
- @property --angle {
-    syntax: '<angle>';
+@property --angle {
+	syntax: '<angle>';
     initial-value: 90deg;
     inherits: true;
-  }
-  
-  @property --gradX {
-    syntax: '<percentage>';
+}
+
+@property --gradX {
+	syntax: '<percentage>';
     initial-value: 50%;
     inherits: true;
-  }
-  
-  @property --gradY {
-    syntax: '<percentage>';
+}
+
+@property --gradY {
+	syntax: '<percentage>';
     initial-value: 0%;
     inherits: true;
-  }
+}
 
- .movie-card {
+.movie-card {
 	margin: max(1rem, 3vw);
     background-color: rgb(59, 55, 55);
 	border: 0.35rem solid;
@@ -54,28 +39,28 @@
 
 
 .movie-card:nth-child(2) {
-    animation: borderRadial var(--d) linear infinite forwards;
+	animation: borderRadial var(--d) linear infinite forwards;
 }
 
 .movie-card-gold {
-    border-image: conic-gradient(from var(--angle), var(--gold2), var(--gold1) 0.1turn, var(--gold1) 0.15turn, var(--gold2) 0.25turn) 30;
+	border-image: conic-gradient(from var(--angle), var(--gold2), var(--gold1) 0.1turn, var(--gold1) 0.15turn, var(--gold2) 0.25turn) 30;
 }
 .movie-card-gold:nth-child(2) {
-    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--gold1), var(--gold1) 10%, var(--gold2) 40%) 30;
- }
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--gold1), var(--gold1) 10%, var(--gold2) 40%) 30;
+}
 
 .movie-card-silver {
-    border-image: conic-gradient(from var(--angle), var(--silver2), var(--silver1) 0.1turn, var(--silver1) 0.15turn, var(--silver2) 0.25turn) 30;
+	border-image: conic-gradient(from var(--angle), var(--silver2), var(--silver1) 0.1turn, var(--silver1) 0.15turn, var(--silver2) 0.25turn) 30;
 }
 .movie-card-silver:nth-child(2) {
-    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--silver1), var(--silver1) 10%, var(--silver2) 40%) 30;
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--silver1), var(--silver1) 10%, var(--silver2) 40%) 30;
 }
 
 .movie-card-bronze {
-    border-image: conic-gradient(from var(--angle), var(--bronze2), var(--bronze1) 0.1turn, var(--bronze1) 0.15turn, var(--bronze2) 0.25turn) 30;
+	border-image: conic-gradient(from var(--angle), var(--bronze2), var(--bronze1) 0.1turn, var(--bronze1) 0.15turn, var(--bronze2) 0.25turn) 30;
 }
 .movie-card-bronze:nth-child(2) {
-    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--bronze1), var(--bronze1) 10%, var(--bronze2) 40%) 30;
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--bronze1), var(--bronze1) 10%, var(--bronze2) 40%) 30;
 }
 
 @keyframes borderRotate {
@@ -108,5 +93,9 @@
 }
 
 .movie-card-image {
-    width: 100%;
+	 width: 100%;
 }
+
+body{
+	font-family: 'Urbanist', sans-serif;
+};
