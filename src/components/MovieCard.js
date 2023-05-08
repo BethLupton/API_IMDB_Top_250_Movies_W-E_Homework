@@ -22,7 +22,7 @@ const MovieCard = ({movie, onMovieSelected}) => {
                 {movie.rank}.
             </div>
             <img className='movie-card-image' src={movie["image"]}/>
-            <p>{movie.fullTitle}</p>
+            <p><b>{movie.fullTitle}</b></p>
             <button className='more-info-button' onClick={handleClick}>More Movie Magic</button>
         </div>
      );

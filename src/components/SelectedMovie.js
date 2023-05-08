@@ -9,10 +9,10 @@ const SelectedMovie = ({movie, goBack}) => {
             <h1 className='font-heading-movies'>{movie.title}</h1>
             <img className='movie-page-image' src={movie["image"]}/>
             <div className='movie-info'>
-                <p>Ranking: {movie.rank}/250</p>
-                <p>Year of Release: {movie.year}</p>
-                <p>Crew: {movie.crew}</p>
-                <h4>Rating: {movie.imDbRating}</h4>
+                <p><b>Ranking:</b> {movie.rank}</p>
+                <p><b>Year of Release:</b> {movie.year}</p>
+                <p><b>Crew:</b> {movie.crew}</p>
+                <p><b>Rating:</b> {movie.imDbRating}</p>
             </div>
         </div>
     )
